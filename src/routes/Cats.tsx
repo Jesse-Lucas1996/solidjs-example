@@ -15,7 +15,6 @@ const Cats: Component = () => {
     fact: string;
     error?: any;
   }
-  const [count, setCount] = createSignal(0);
   const [state, setState] = createSignal<State>({
     status: "",
     data: null,
@@ -37,16 +36,11 @@ const Cats: Component = () => {
         <img src={Cat} />
       </button>
       <br />
-      <Switch fallback={<div>No Data</div>}>
+      <Switch fallback={<div>Click the kitty</div>}>
         <Match when={state().status === "pending"}>Loading....</Match>
         <Match when={state().status === "rejected"}>{state().error}</Match>
         <Match when={state().status === "resolved"}>{state().data}</Match>
       </Switch>
-      <button class={styles.button} onclick={() => setCount(count() + 1)}>
-        <img src={Counter} />
-      </button>
-      <br />
-      <p>The Count is {count()}</p>
     </div>
   );
 };
