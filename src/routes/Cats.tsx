@@ -31,7 +31,7 @@ const Cats: Component = () => {
   };
 
   return (
-    <div class="bg-slate-800 min-h-screen flex flex-col items-center justify-center text-white text-3xl">
+    <div class="bg-slate-500 min-h-screen flex flex-col items-center justify-center text-white text-3xl">
       <button
         class="h-24 w-24 p-2 m-2 text-lg text-indigo-100 transition-colors duration-150 rounded-full focus:shadow-outline"
         onclick={fetchCatFact}
