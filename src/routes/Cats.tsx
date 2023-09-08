@@ -1,8 +1,6 @@
 import { createSignal, type Component, Switch, Match } from "solid-js";
-import { getCatFact } from "../api";
 import styles from "../App.module.css";
 import Cat from "../assets/cat.svg";
-import Counter from "../assets/counter.svg";
 
 const Cats: Component = () => {
   interface State {
@@ -23,7 +21,9 @@ const Cats: Component = () => {
   const fetchCatFact = async () => {
     try {
       setState({ status: "pending" });
-      const res: CatFact = await getCatFact();
+      const res: CatFact = await (
+        await fetch("https://catfact.ninja/fact")
+      ).json();
       setState({ status: "resolved", data: res.fact });
     } catch (error: any) {
       setState({ status: "rejected", error: error });
