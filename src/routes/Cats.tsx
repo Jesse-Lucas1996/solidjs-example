@@ -1,6 +1,7 @@
 import { createSignal, type Component, Switch, Match } from "solid-js";
 import styles from "../App.module.css";
 import Cat from "../assets/cat.svg";
+import { Loading } from "../components/loader";
 
 const Cats: Component = () => {
   interface State {
@@ -37,7 +38,9 @@ const Cats: Component = () => {
       </button>
       <br />
       <Switch fallback={<div>Click the kitty</div>}>
-        <Match when={state().status === "pending"}>Loading....</Match>
+        <Match when={state().status === "pending"}>
+          <Loading />
+        </Match>
         <Match when={state().status === "rejected"}>{state().error}</Match>
         <Match when={state().status === "resolved"}>{state().data}</Match>
       </Switch>

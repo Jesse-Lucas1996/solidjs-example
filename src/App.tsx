@@ -6,7 +6,9 @@ const App = () => {
     <div class={styles.App}>
       <header class={styles.header}>
         Want some cool cat facts? Click below
-        <A href="/cats">Cat Facts </A>
+        <A class="text-3xl underline" href="/cats">
+          Cat Facts{" "}
+        </A>
       </header>
     </div>
   );
