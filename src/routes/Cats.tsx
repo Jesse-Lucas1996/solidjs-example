@@ -1,5 +1,5 @@
 import { createSignal, type Component, Switch, Match } from "solid-js";
-import { FaSolidCat } from "solid-icons/fa";
+import { BiSolidCat } from "solid-icons/bi";
 import { Loading } from "../components/loader";
 
 const Cats: Component = () => {
@@ -36,7 +36,7 @@ const Cats: Component = () => {
         class="h-24 w-24 p-2 m-2 text-lg text-indigo-100 transition-transform duration-150 rounded-full focus:shadow-outline hover:scale-110 transform hover:rotate-12"
         onclick={fetchCatFact}
       >
-        <FaSolidCat class="h-full w-full" />
+        <BiSolidCat fill="#FFFFFF" class="h-full w-full" />
       </button>
       <br />
       <Switch fallback={<div>Click the kitty</div>}>
