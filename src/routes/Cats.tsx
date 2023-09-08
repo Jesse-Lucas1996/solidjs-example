@@ -9,10 +9,10 @@ const Cats: Component = () => {
     error?: any;
   }
 
-  interface CatFact {
+  type CatFact = {
     fact: string;
     error?: any;
-  }
+  };
   const [state, setState] = createSignal<State>({
     status: "",
     data: null,
