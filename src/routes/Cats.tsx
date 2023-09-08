@@ -1,5 +1,4 @@
 import { createSignal, type Component, Switch, Match } from "solid-js";
-import styles from "../App.module.css";
 import Cat from "../assets/cat.svg";
 import { Loading } from "../components/loader";
 
@@ -32,9 +31,12 @@ const Cats: Component = () => {
   };
 
   return (
-    <div class={styles.header}>
-      <button class={styles.button} onclick={fetchCatFact}>
-        <img src={Cat} />
+    <div class="bg-slate-800 min-h-screen flex flex-col items-center justify-center text-white text-3xl">
+      <button
+        class="h-24 w-24 p-2 m-2 text-lg text-indigo-100 transition-colors duration-150 rounded-full focus:shadow-outline"
+        onclick={fetchCatFact}
+      >
+        <img class="w-full h-full object-cover" src={Cat} />
       </button>
       <br />
       <Switch fallback={<div>Click the kitty</div>}>

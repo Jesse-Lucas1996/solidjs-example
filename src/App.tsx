@@ -1,10 +1,9 @@
 import { A } from "@solidjs/router";
-import styles from "./App.module.css";
 
 const App = () => {
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
+    <div class="text-center">
+      <header class="bg-slate-800 min-h-screen flex flex-col items-center justify-center text-white text-3xl">
         Want some cool cat facts? Click below
         <A class="text-3xl underline" href="/cats">
           Cat Facts{" "}
