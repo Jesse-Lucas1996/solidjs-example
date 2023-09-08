@@ -1,10 +1,10 @@
-/* @refresh reload */
 import { render } from "solid-js/web";
 
 import "./index.css";
 import App from "./App";
 import { Route, Router, Routes } from "@solidjs/router";
 import Cats from "./routes/Cats";
+import { NotFound } from "./routes/404";
 
 const root = document.getElementById("root");
 
@@ -20,8 +20,9 @@ render(
       <Routes>
         <Route path="/" component={App} />
         <Route path="/cats" component={Cats} />
+        <Route path="*" component={NotFound} />
       </Routes>
     </Router>
   ),
-  document.getElementById("root")!
+  document.getElementById("root") ?? new HTMLElement()
 );
