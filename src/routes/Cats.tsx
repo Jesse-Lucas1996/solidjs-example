@@ -1,4 +1,4 @@
-import { createSignal, type Component, createResource, For } from "solid-js";
+import { type Component, createResource } from "solid-js";
 import { BiSolidCat } from "solid-icons/bi";
 import { Loading } from "../components/loader";
 
