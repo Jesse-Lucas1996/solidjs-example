@@ -18,8 +18,7 @@ render(
   () => (
     <Router>
       <Routes>
-        <Route path="/" component={App} />
-        <Route path="/cats" component={Cats} />
+        <Route path="/" component={Cats} />
         <Route path="*" component={NotFound} />
       </Routes>
     </Router>
