@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import { Route, Router, Routes } from "@solidjs/router";
 import Cats from "./routes/Cats";
-import { NotFound } from "./routes/404";
 
 const root = document.getElementById("root");
 
@@ -19,7 +18,7 @@ render(
     <Router>
       <Routes>
         <Route path="/" component={Cats} />
-        <Route path="*" component={NotFound} />
+        <Route path="*" component={App} />
       </Routes>
     </Router>
   ),

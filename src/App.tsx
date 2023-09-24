@@ -5,7 +5,7 @@ const App = () => {
     <div class="text-center">
       <header class="bg-slate-500 min-h-screen flex flex-col items-center justify-center text-white text-3xl">
         Want some cool cat facts? Click below
-        <Link class="text-blue-400 hover:underline" href="/cats">
+        <Link class="text-blue-400 hover:underline" href="/">
           Cat Facts{" "}
         </Link>
       </header>

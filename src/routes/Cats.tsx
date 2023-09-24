@@ -29,7 +29,7 @@ const Cats: Component = () => {
         <div>
           {fact.loading && <Loading />}
           {!fact.loading && fact.error && (
-            <p>Ruh Roh Raggy Something went wrong</p>
+            <p>{fact.error}</p>
           )}
           {!fact.loading && fact() && <p>{fact() ?? ""}</p>}
         </div>
